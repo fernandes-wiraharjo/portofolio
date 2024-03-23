@@ -4265,5 +4265,37 @@ $(document).ready((function() {
         alert('Please do not refresh the page until the process is complete.');
     }
     ));
+
+    $(".show-gallery-vm-button").click(function() {
+        $("#vmGalleryModal").css("display", "block");
+    });
+
+    $(".close").click(function() {
+    $("#vmGalleryModal").css("display", "none");
+    });
+
+    // Gallery navigation
+    var slideIndex = 1;
+    showSlide(slideIndex);
+
+    $(".prev").click(function() {
+        showSlide(slideIndex -= 1);
+    });
+
+    $(".next").click(function() {
+        showSlide(slideIndex += 1);
+    });
+
+    function showSlide(n) {
+        var slides = $(".vm-gallery-image");
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        slides.hide();
+        slides.eq(slideIndex - 1).show();
+    }
 }
 ));
