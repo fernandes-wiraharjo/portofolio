@@ -4266,23 +4266,41 @@ $(document).ready((function() {
     }
     ));
 
+    // Function to handle modal display
+    function showModal(modalId) {
+        $(modalId).css("display", "block");
+    }
+
+    // Function to handle modal close
+    function closeModal(modalId) {
+        $(modalId).css("display", "none");
+    }
+
+    // Click event for showing VM gallery modal
     $(".show-gallery-vm-button").click(function() {
-        $("#vmGalleryModal").css("display", "block");
+        showModal("#vmGalleryModal");
     });
 
+    // Click event for showing PB gallery modal
+    $(".show-gallery-pb-button").click(function() {
+        showModal("#pbGalleryModal");
+    });
+
+    // Click event for closing modals
     $(".close").click(function() {
-    $("#vmGalleryModal").css("display", "none");
+        closeModal("#vmGalleryModal");
+        closeModal("#pbGalleryModal");
     });
 
-    // Gallery navigation
+    // VM Gallery navigation
     var slideIndex = 1;
     showSlide(slideIndex);
 
-    $(".prev").click(function() {
+    $("#btnPrevVm").click(function() {
         showSlide(slideIndex -= 1);
     });
 
-    $(".next").click(function() {
+    $("#btnNextVm").click(function() {
         showSlide(slideIndex += 1);
     });
 
@@ -4296,6 +4314,30 @@ $(document).ready((function() {
         }
         slides.hide();
         slides.eq(slideIndex - 1).show();
+    }
+
+    // Prima Ban Gallery navigation
+    var slideIndexPb = 1;
+    showSlidePb(slideIndexPb);
+
+    $("#btnPrevPb").click(function() {
+        showSlidePb(slideIndexPb -= 1);
+    });
+
+    $("#btnNextPb").click(function() {
+        showSlidePb(slideIndexPb += 1);
+    });
+
+    function showSlidePb(n) {
+        var slides = $(".pb-gallery-image");
+        if (n > slides.length) {
+            slideIndexPb = 1;
+        }
+        if (n < 1) {
+            slideIndexPb = slides.length;
+        }
+        slides.hide();
+        slides.eq(slideIndexPb - 1).show();
     }
 }
 ));
