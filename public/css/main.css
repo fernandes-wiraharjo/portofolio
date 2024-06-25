@@ -3997,7 +3997,7 @@ hr { background-color: #E6ECF8; }
 
 .section { padding: 5rem 1.5rem; }
 
-.section.is-primary { background-color: #6E07F3; color: white; }
+.section.is-primary { background-color: #3e8ed0; color: white; }
 
 .section.is-primary .title { color: white; }
 
@@ -4295,15 +4295,15 @@ input[name="carousel"] { display: none; }
 
 .carousel-slides .carousel-item { float: left; width: 20%; }
 
-#carousel-1:checked ~ .carousel-nav label[for="carousel-1"] { background-color: #6E07F3; border: 2px solid #6E07F3; }
+#carousel-1:checked ~ .carousel-nav label[for="carousel-1"] { background-color: #3e8ed0; border: 2px solid #3e8ed0; }
 
-#carousel-2:checked ~ .carousel-nav label[for="carousel-2"] { background-color: #6E07F3; border: 2px solid #6E07F3; }
+#carousel-2:checked ~ .carousel-nav label[for="carousel-2"] { background-color: #3e8ed0; border: 2px solid #3e8ed0; }
 
-#carousel-3:checked ~ .carousel-nav label[for="carousel-3"] { background-color: #6E07F3; border: 2px solid #6E07F3; }
+#carousel-3:checked ~ .carousel-nav label[for="carousel-3"] { background-color: #3e8ed0; border: 2px solid #3e8ed0; }
 
-#carousel-4:checked ~ .carousel-nav label[for="carousel-4"] { background-color: #6E07F3; border: 2px solid #6E07F3; }
+#carousel-4:checked ~ .carousel-nav label[for="carousel-4"] { background-color: #3e8ed0; border: 2px solid #3e8ed0; }
 
-#carousel-5:checked ~ .carousel-nav label[for="carousel-5"] { background-color: #6E07F3; border: 2px solid #6E07F3; }
+#carousel-5:checked ~ .carousel-nav label[for="carousel-5"] { background-color: #3e8ed0; border: 2px solid #3e8ed0; }
 
 #carousel-1:checked ~ .carousel-slides .carousel-inner { margin-left: 0%; }
 
