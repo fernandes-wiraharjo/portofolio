@@ -92,7 +92,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', { year: new Date().getFullYear() });
 });
 
 app.get('/contact', (req, res) => {
